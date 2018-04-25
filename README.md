@@ -1,2 +1,2 @@
 # ICp-banking-microservices
-ICp Banking Microservices with LinuxONE Community Cloud
+ICp Banking Microservices code pattern with LinuxONE Community Cloud
