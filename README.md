@@ -40,12 +40,9 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 # Steps
 
-### Step 1 - Discover and locally run the banking application
+<!-- https://ecotrust-canada.github.io/markdown-toc/ -->
 
-* Part 1 - Discover the banking application
-* Part 2 - Subscribe to the banking API through the API Developer Portal
-* Part 3 - Run the banking application with NodeJS
-* Part 4 - Push the banking application to your GitHub repository
+### Step 1 - Discover and locally run the banking application
 
 - [Part 1 - Discover the banking application](#part-1---discover-the-banking-application)
 - [Part 2 - Subscribe to the banking API through the API Developer Portal](#part-2---subscribe-to-the-banking-api-through-the-api-developer-portal)
@@ -54,20 +51,20 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ### Step 2 - Build and deploy a docker image to IBM Cloud private
 
-* Part 1 - Build the Docker image
-* Part 2 - Deploy the docker image to IBM Cloud private
+- [Part 1 - Build the Docker image](#part-1---build-the-docker-image)
+- [Part 2 - Deploy the docker image to IBM Cloud private](#part-2---deploy-the-docker-image-to-ibm-cloud-private)
 
 ### Step 3 - Build and deploy an Helm chart to the IBM Cloud private catalog
 
-* Part 1 - Create the Helm chart
-* Part 2 - Configure the Helm chart
-* Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog
+- [Part 1 - Create the Helm chart](#part-1---create-the-helm-chart)
+- [Part 2 - Configure the Helm chart](#part-2---configure-the-helm-chart)
+- [Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog (#part-3---package-and-deploy-your-helm-chart-to-the-ibm-cloud-private-catalog)
 
 ### Step 4 - Instantiate the banking microservice from IBM Cloud private catalog
 
-* Part 1 - Discover your Helm chart from the calalog
-* Part 2 - Configure and install your banking microservice
-* Part 3 - Access your banking microservice
+- [Part 1 - Discover your Helm chart from the calalog](#part-1---discover-your-helm-chart-from-the-calalog)
+- [Part 2 - Configure and install your banking microservice](#part-2---configure-and-install-your-banking-microservice)
+- [Part 3 - Access your banking microservice](#part-3---access-your-banking-microservice)
 
 ### Troubleshooting
 ### Privacy Notice
