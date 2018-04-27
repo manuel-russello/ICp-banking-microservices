@@ -1,4 +1,4 @@
-# ICp-banking-microservices
+# Title
 
 In this Code Pattern, we will build and deploy microservices using IBM Cloud private and the LinuxONE Community Cloud. [Explain briefly how things work]. [Give acknowledgements to others if necessary]
 
@@ -31,10 +31,6 @@ Select components from [here](https://github.ibm.com/developer-journeys/journey-
 Select components from [here](https://github.ibm.com/developer-journeys/journey-docs/tree/master/_content/dev#technologies), copy and paste the raw text for ease
 * [Technology](link): description
 * [Technology](link): description
-
-<!--Update this section when the video is created-->
-# Watch the Video
-[![](http://img.youtube.com/vi/Jxi7U7VOMYg/0.jpg)](https://www.youtube.com/watch?v=Jxi7U7VOMYg)
 
 # Steps
 
@@ -161,3 +157,9 @@ Select components from [here](https://github.ibm.com/developer-journeys/journey-
 2. Go to your deployment
 
 3. Select **access http** and enjoy your new app!
+
+
+#Troubleshooting
+#Privacy Notice
+#Links
+#Links
