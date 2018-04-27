@@ -74,7 +74,7 @@ The objective is to discover the banking application located in the *banking-app
 
 ## Part 1 - Discover the banking application
 
-1. Install the Git command line interface[Git CLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+1. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 
 2. Launch a terminal and clone this GitHub repository:
     `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
