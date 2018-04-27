@@ -70,6 +70,8 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 # Step 1 - Discover and locally run the banking application
 
+The objective is to discover the banking application located in the *banking-application* folder. This application is a NodeJS application. It will be locally tested before packaging it into a Docker image for IBM Cloud private.
+
 ## Part 1 - Discover the banking application
 
 1. Clone your GitHub repository:
@@ -127,7 +129,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 1. Install **Node.js**, **NPM**, and the **Git CLI**
 
 2. Make sure the app is working: (TO MOVE TO STEP 1?)
-    - Go to your repository root folder:
+    - Launch a terminal. Go to your repository root folder:
 
     `cd YOUR_REPOSITORY_NAME`
 
@@ -135,17 +137,18 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
     `node banking-application/app.js`
 
-3. Launch a web brower and go to **localhost:3000**
+3. Launch a web brower and go to **localhost:3000**. The banking application appears.
     
 	![alt text](images/banking_app.png "Banking application")
-    * The banking application appears
-    
+
+4. Test your application.
+
 	![alt text](images/banking_app_test.png "Banking application")
-    * Select a customer ID
-    * Please wait during the application calls banking data through API Connect
+    * Select a customer ID.
+    * Please wait during the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
     * The result is displayed in a JSON structure.
     
-4. The banking application works without any issue, stop the server with a **SIGINT (CTRL+C)**.
+4. The banking application locally works, stop the NodeJS server with a **SIGINT (CTRL+C)** from the terminal.
 
 
 ## Part 4 - Push the banking application to your GitHub repository
@@ -156,6 +159,9 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 
 # Step 2 - Build and deploy a docker image to IBM Cloud private
+
+The objective is to build a docker image from the banking application and then deploy it to the IBM Cloud private.
+
 ## Part 1 - Build the Docker image
 
 1. Push your code to your Git repository
@@ -189,6 +195,10 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 
 # Step 3 - Build and deploy an Helm chart to the ICP catalog
+
+The objective is to build ...
+
+
 ## Part 1 - Create the Helm chart
 1. Go back to your development system
 
@@ -228,6 +238,9 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
     `bx pr load-helm-chart --archive helm-chart-YOUR_USERNAME-0.1.0.tgz --clustername MASTER_NODE_IP`
 
 # Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
+
+The objective is to ...
+
 
 ## Part 1 - Discover your Helm chart from the calalog
 1. Connect to the ICP Web UI through your Web browser, on **ICP_MASTER_NODE:PORT**
