@@ -124,7 +124,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ## Part 3 - Run the banking application with NodeJS
 
-1. Log in onto your development system, then install **Node.js**, **NPM**, and the **Git CLI**
+1. Install **Node.js**, **NPM**, and the **Git CLI**
 
 2. Make sure the app is working: (TO MOVE TO STEP 1?)
     - Go to your repository root folder:
@@ -134,8 +134,18 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
     - From the app root folder, launch the app:
 
     `node banking-application/app.js`
+
+3. Launch a web brower and go to **localhost:3000**
     
-    - If it works without any issue, stop the server with a **SIGINT (CTRL+C)**.
+	![alt text](images/banking_app.png "Banking application")
+    * The banking application appears
+    
+	![alt text](images/banking_app_test.png "Banking application")
+    * Select a customer ID
+    * Please wait during the application calls banking data through API Connect
+    * The result is displayed in a JSON structure.
+    
+4. The banking application works without any issue, stop the server with a **SIGINT (CTRL+C)**.
 
 
 ## Part 4 - Push the banking application to your GitHub repository
