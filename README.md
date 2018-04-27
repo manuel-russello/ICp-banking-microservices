@@ -40,7 +40,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 # Steps
 
-### Step 1 - Discover and locally run the banking application
+### [Step 1 Discover and locally run the banking application](#step-1-discover-and-locally-run-the-banking-application)
 
 * Part 1 - Discover the banking application
 * Part 2 - Subscribe to the banking API through the API Developer Portal
@@ -70,7 +70,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ---
 
-# Step 1 - Discover and locally run a banking application
+# Step 1 Discover and locally run a banking application
 ## Part 1 - Discover the banking application
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 ## Part 3 - Run the banking application with NodeJS
