@@ -1,36 +1,42 @@
 # Title
 
-In this Code Pattern, we will build and deploy microservices using IBM Cloud private and the LinuxONE Community Cloud. [Explain briefly how things work]. [Give acknowledgements to others if necessary]
+In this Code Pattern, you will build and deploy a banking microservice with IBM Cloud private running in the LinuxONE Community Cloud. [Explain briefly how things work]. [Give acknowledgements to others if necessary]
 
-When the reader has completed this Code Pattern, they will understand how to:
+When you will complete this Code Pattern, you will understand how to:
 
-* [goal 1]
-* [goal 2]
-* [goal 3]
-* [goal 4]
+* Build a Docker image from an exisiting application.
+* Deploy a Docker image to IBM Cloud Private.
+* Deploy a Helm chart.
+* Use the catalog from IBM Cloud Private.
 
-<!--Remember to dump an image in this path-->
-![](doc/source/images/architecture.png)
+# Architecture
 
-## Flow
-<!--Add new flow steps based on the architecture diagram-->
-1. Step 1.
-2. Step 2.
-3. Step 3.
-4. Step 4.
-5. Step 5.
+This journey accesses a fictitious retail banking system called MPLbank. MPLbank integrates an Account Management System running on IBM Mainframe. On top of this component, an API layer based on IBM API Connect has been set up to deliver a banking API. It makes banking services reachable through API from all kind of applications. IBM Cloud private has been configured into the LinuxOne LinuxONE Community Cloud.
 
-<!--Update this section-->
-## Included components
-Select components from [here](https://github.ibm.com/developer-journeys/journey-docs/tree/master/_content/dev#components), copy and paste the raw text for ease
-* [Component](link): description
-* [Component](link): description
+IBM Cloud Private is a private cloud platform for developing and running workloads locally. It is an integrated environment that enables you to design, develop, deploy and manage on-premises, containerized cloud applications behind a firewall. It includes the container orchestrator Kubernetes, a private image repository, a management console and monitoring frameworks.
 
-<!--Update this section-->
-## Featured technologies
-Select components from [here](https://github.ibm.com/developer-journeys/journey-docs/tree/master/_content/dev#technologies), copy and paste the raw text for ease
-* [Technology](link): description
-* [Technology](link): description
+![alt text](images/architecture_pattern.png "Architecture")
+
+1. The user deploys the application based microservice on the worker Node on Linux on Z using IBM Cloud Private.
+2. The user installs and runs an instance of his microservice from IBM Cloud Private. The application calls a banking API published in API Connect.
+3. API Connect calls the back-end Z Mainframe through a banking API published in z/OS Connect EE.
+4. z/OS Connect EE calls the Account Management System (AMS) running in CICS. A COBOL program processes the request and returns banking data. Finally, banking data are sent back to microservice application in the Worker Node on Linux on Z.
+
+
+# Included components
+
+* [IBM LinuxOne](https://www.ibm.com/it-infrastructure/linuxone)
+* [IBM Cloud Private](https://www.ibm.com/cloud/private)
+* [IBM Z Mainframe](https://www.ibm.com/it-infrastructure/z)
+* [IBM z/OS Connect Enterprise Edition](https://www.ibm.com/us-en/marketplace/connect-enterprise-edition)
+* [IBM CICS Tansaction Server](https://www.ibm.com/us-en/marketplace/cics-transaction-server#product-header-top)
+* [IBM Db2](https://www.ibm.com/analytics/db2/zos)
+
+# Featured technologies
+
+* [microservice](https://www.ibm.com/cloud/garage/architectures/microservices/)
+* [IBM LinuxOne](https://www.ibm.com/it-infrastructure/linuxone)
+* [IBM Cloud Private](https://www.ibm.com/cloud/private)
 
 # Steps
 
