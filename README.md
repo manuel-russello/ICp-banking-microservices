@@ -58,17 +58,13 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 - [Part 1 - Create the Helm chart](#part-1---create-the-helm-chart)
 - [Part 2 - Configure the Helm chart](#part-2---configure-the-helm-chart)
-- [Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog (#part-3---package-and-deploy-your-helm-chart-to-the-ibm-cloud-private-catalog)
+- [Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog](#part-3---package-and-deploy-your-helm-chart-to-the-ibm-cloud-private-catalog)
 
-### Step 4 - Instantiate the banking microservice from IBM Cloud private catalog
+### Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
 
 - [Part 1 - Discover your Helm chart from the calalog](#part-1---discover-your-helm-chart-from-the-calalog)
 - [Part 2 - Configure and install your banking microservice](#part-2---configure-and-install-your-banking-microservice)
 - [Part 3 - Access your banking microservice](#part-3---access-your-banking-microservice)
-
-### Troubleshooting
-### Privacy Notice
-### Links
 
 ---
 
@@ -174,7 +170,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 3. Upload the package to ICP
     `bx pr load-helm-chart --archive helm-chart-YOUR_USERNAME-0.1.0.tgz --clustername MASTER_NODE_IP`
 
-# Step 4 - Instantiate the banking microservice from IBM Cloud private catalog
+# Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
 
 ## Part 1 - Discover your Helm chart from the calalog
 1. Connect to the ICP Web UI through your Web browser, on **ICP_MASTER_NODE:PORT**
