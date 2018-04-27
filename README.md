@@ -47,25 +47,26 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 * Part 3 - Run the banking application with NodeJS
 * Part 4 - Push the banking application to your GitHub repository
 
-## Step 2 - Build and deploy a docker image to IBM Cloud private
+### Step 2 - Build and deploy a docker image to IBM Cloud private
 
-### Part 1 - Build the Docker image
-### Part 2 - Deploy the docker image to IBM Cloud private
+* Part 1 - Build the Docker image
+* Part 2 - Deploy the docker image to IBM Cloud private
 
-## Step 3 - Build and deploy an Helm chart to the IBM Cloud private catalog
+### Step 3 - Build and deploy an Helm chart to the IBM Cloud private catalog
 
-### Part 1 - Create the Helm chart
-### Part 2 - Configure the Helm chart
-### Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog
+* Part 1 - Create the Helm chart
+* Part 2 - Configure the Helm chart
+* Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog
 
-## Step 4 - Instantiate the banking microservice from IBM Cloud private catalog
-### Part 1 - Discover your Helm chart from the calalog
-### Part 2 - Configure and install your banking microservice
-### Part 3 - Access your banking microservice
+### Step 4 - Instantiate the banking microservice from IBM Cloud private catalog
 
-##Troubleshooting
-##Privacy Notice
-##Links
+* Part 1 - Discover your Helm chart from the calalog
+* Part 2 - Configure and install your banking microservice
+* Part 3 - Access your banking microservice
+
+### Troubleshooting
+### Privacy Notice
+### Links
 
 ---
 
