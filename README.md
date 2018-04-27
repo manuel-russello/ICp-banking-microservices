@@ -1,5 +1,38 @@
-# ICp-banking-microservices
-ICp Banking Microservices code pattern with LinuxONE Community Cloud
+# Title
+
+In this Code Pattern, we will build and deploy microservices using IBM Cloud private and the LinuxONE Community Cloud. [Explain briefly how things work]. [Give acknowledgements to others if necessary]
+
+When the reader has completed this Code Pattern, they will understand how to:
+
+* [goal 1]
+* [goal 2]
+* [goal 3]
+* [goal 4]
+
+<!--Remember to dump an image in this path-->
+![](doc/source/images/architecture.png)
+
+## Flow
+<!--Add new flow steps based on the architecture diagram-->
+1. Step 1.
+2. Step 2.
+3. Step 3.
+4. Step 4.
+5. Step 5.
+
+<!--Update this section-->
+## Included components
+Select components from [here](https://github.ibm.com/developer-journeys/journey-docs/tree/master/_content/dev#components), copy and paste the raw text for ease
+* [Component](link): description
+* [Component](link): description
+
+<!--Update this section-->
+## Featured technologies
+Select components from [here](https://github.ibm.com/developer-journeys/journey-docs/tree/master/_content/dev#technologies), copy and paste the raw text for ease
+* [Technology](link): description
+* [Technology](link): description
+
+# Steps
 
 # Step 1 - Discover and locally run a banking application (Node.js) from a the git repository
 
@@ -13,6 +46,15 @@ ICp Banking Microservices code pattern with LinuxONE Community Cloud
 
 ## Part 4  - Validate the code and locally run the app
 1. Log in onto your development system, then install **Node.js**, **NPM**, and the **Git CLI**
+
+## Step 2 - Build and deploy a docker image from this application using a docker file to ICP (worker node on Linux on Z)
+
+### Part 1 - Create your GitHub repository (TO MOVE TO STEP 1?)
+1. Connect to your GitHub account or create one, it's free! Your username will be **YOUR_USERNAME**
+2. Create a new repository and name it `icp-code-pattern-YOUR_USERNAME` (OR FORK THE REPO?!), this will be **YOUR_REPOSITORY_NAME**
+
+### Part 2  - Validate the code and prepare the Docker image
+1. On your development system, install **Node.js** and **NPM**, and the **Git CLI**
 
 2. Clone your GitHub repository:
     `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
@@ -63,7 +105,7 @@ ICp Banking Microservices code pattern with LinuxONE Community Cloud
 
 # Step 3 - Build and deploy an Helm chart to the ICP catalog
 
-## Part 1 - Create the Helm chart
+### Part 1 - Create the Helm chart
 1. Go back to your development system
 
 2. Create your helm chart   
@@ -72,7 +114,7 @@ ICp Banking Microservices code pattern with LinuxONE Community Cloud
 3. Go to your chart folder
     `cd helm-chart-YOUR_USERNAME`
 
-## Part 2 - Configure the Helm chart
+### Part 2 - Configure the Helm chart
 (Steps to create the files and configure the values)
 
 10. Validate the Helm chart:
@@ -83,7 +125,7 @@ ICp Banking Microservices code pattern with LinuxONE Community Cloud
     - Analyse and validate the chart:
     `helm lint helm-chart-YOUR_USERNAME`
 
-## Part 3 - Package and deploy your Helm chart to ICP
+### Part 3 - Package and deploy your Helm chart to ICP
 2. Package the Helm chart
     
     `helm package helm-chart-YOUR_USERNAME`
@@ -101,16 +143,16 @@ ICp Banking Microservices code pattern with LinuxONE Community Cloud
 4. Upload the package to ICP
     `bx pr load-helm-chart --archive helm-chart-YOUR_USERNAME-0.1.0.tgz --clustername MASTER_NODE_IP`
 
-# Step 4 - Instantiate a banking microservice (from his docker image) using the ICP catalog
+## Step 4 - Instantiate a banking microservice (from his docker image) using the ICP catalog
 
-## Part 1 - Connect to ICP
+### Part 1 - Connect to ICP
 1. Connect to the ICP Web UI through your Web browser, on **ICP_MASTER_NODE:PORT**
 
 2. When prompted, type in these credentials then :
     - Username: `admin`
     - Password: `admin`
 
-## Part 2 - Find and deploy your Helm chart
+### Part 2 - Find and deploy your Helm chart
 1. Click on the top-left *hamburger* icon, then select the **Catalog** option
 
 2. Right to the catalog search bar, click on **Filter** then on the **local-charts** checkbox
@@ -127,3 +169,7 @@ ICp Banking Microservices code pattern with LinuxONE Community Cloud
 1. Scroll down and click on the only **deployment** available 
 
 2. Select **access http** under the **Expose details** panel and enjoy your new app!
+
+#Troubleshooting
+#Privacy Notice
+#Links
