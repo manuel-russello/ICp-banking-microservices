@@ -46,7 +46,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 - [Part 1 - Discover the banking application](#part-1---discover-the-banking-application)
 - [Part 2 - Subscribe to the banking API through the API Developer Portal](#part-2---subscribe-to-the-banking-api-through-the-api-developer-portal)
-- [Part 3 - Run the banking application with NodeJS](#part-3---run-the-banking-application-with-nodejs)
+- [Part 3 - Run the banking application with Node.js](#part-3---run-the-banking-application-with-nodejs)
 - [Part 4 - Push the banking application to your GitHub repository](#part-4---push-the-banking-application-to-your-github-repository)
 
 ### Step 2 - Build and deploy a docker image to IBM Cloud private
@@ -74,8 +74,12 @@ The objective is to discover the banking application located in the *banking-app
 
 ## Part 1 - Discover the banking application
 
-1. Clone your GitHub repository:
+1. Install the Git command line interface[Git CLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+
+2. Launch a terminal and clone this GitHub repository:
     `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+
+2. TODO
 
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
@@ -124,9 +128,11 @@ The objective is to discover the banking application located in the *banking-app
 	* Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
 	* Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
 
-## Part 3 - Run the banking application with NodeJS
+## Part 3 - Run the banking application with Node.js
 
-1. Install **Node.js**, **NPM**, and the **Git CLI**
+1. Install components for your environment (Windows, Mac OS, Linux):
+	*	[Node.js](https://nodejs.org/en/) : Node.js is javascript server and will run the banking application. 
+	* 	[npm](https://www.npmjs.com/get-npm) : npm resolves Node.js package dependencies. According to your operating system, npm may be distributed with Node.js.
 
 2. Launch a terminal. Go to your repository root folder:
 
@@ -147,13 +153,13 @@ The objective is to discover the banking application located in the *banking-app
     * Please wait during the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
     * The result is displayed in a JSON structure.
     
-4. The banking application locally works, stop the NodeJS server with a **SIGINT (CTRL+C)** from the terminal.
+4. The banking application locally works, stop the Node.js server with a **SIGINT (CTRL+C)** from the terminal.
 
 
 ## Part 4 - Push the banking application to your GitHub repository
 1. Connect to your GitHub account or create one, it's free! Your username will be **YOUR_USERNAME**
 2. Create a new repository and name it `icp-code-pattern-YOUR_USERNAME` (OR FORK THE REPO?!), this will be **YOUR_REPOSITORY_NAME**
-
+3.TODO
 
 
 
