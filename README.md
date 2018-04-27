@@ -40,12 +40,17 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 # Steps
 
-### [Step 1 Discover and locally run the banking application](#step-1-discover-and-locally-run-the-banking-application)
+### Step 1 - Discover and locally run the banking application
 
 * Part 1 - Discover the banking application
 * Part 2 - Subscribe to the banking API through the API Developer Portal
 * Part 3 - Run the banking application with NodeJS
 * Part 4 - Push the banking application to your GitHub repository
+
+- [Part 1 - Discover the banking application](#part-1---discover-the-banking-application)
+- [Part 2 - Subscribe to the banking API through the API Developer Portal](#part-2---subscribe-to-the-banking-api-through-the-api-developer-portal)
+- [Part 3 - Run the banking application with NodeJS](#part-3---run-the-banking-application-with-nodejs)
+- [Part 4 - Push the banking application to your GitHub repository](#part-4---push-the-banking-application-to-your-github-repository)
 
 ### Step 2 - Build and deploy a docker image to IBM Cloud private
 
@@ -70,7 +75,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ---
 
-# Step 1 Discover and locally run a banking application
+# Step 1 - Discover and locally run a banking application
 ## Part 1 - Discover the banking application
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 ## Part 3 - Run the banking application with NodeJS
