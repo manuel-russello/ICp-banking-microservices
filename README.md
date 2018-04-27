@@ -123,7 +123,7 @@ The objective is to discover the banking application located in the *banking-app
 	* Select the App that you have just created before.
 	* Click **Subscribe**.
 	
-8. Modify the */js/bankingAPI.js* in your banking application.
+8. Modify the *banking-application/js/bankingAPI.js* in your banking application.
 	![alt text](images/client_id_secret.png "javascript code")
 	* Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
 	* Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
