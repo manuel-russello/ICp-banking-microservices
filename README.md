@@ -1,10 +1,10 @@
-# Title
+# Create and deploy a financial microservice to Linux on Z using IBM Cloud Private 
 
-In this Code Pattern, you will build and deploy a banking microservice with IBM Cloud private running in the LinuxONE Community Cloud. [Explain briefly how things work]. [Give acknowledgements to others if necessary]
+In this Code Pattern, you will build and deploy a banking microservice with IBM Cloud private running in the LinuxONE Community Cloud. IBM Cloud Private is a private cloud platform for developing and running workloads locally. It is an integrated environment that enables you to design, develop, deploy and manage on-premises, containerized cloud applications behind a firewall. It includes the container orchestrator Kubernetes, a private image repository, a management console and monitoring frameworks.
 
 When you will complete this Code Pattern, you will understand how to:
 
-* Build a Docker image from an exisiting application.
+* Build a Docker image from an existing application.
 * Deploy a Docker image to IBM Cloud Private.
 * Deploy a Helm chart.
 * Use the catalog from IBM Cloud Private.
@@ -12,8 +12,6 @@ When you will complete this Code Pattern, you will understand how to:
 # Architecture
 
 This journey accesses a fictitious retail banking system called MPLbank. MPLbank integrates an Account Management System running on IBM Mainframe. On top of this component, an API layer based on IBM API Connect has been set up to deliver a banking API. It makes banking services reachable through API from all kind of applications. IBM Cloud private has been configured into the LinuxOne LinuxONE Community Cloud.
-
-IBM Cloud Private is a private cloud platform for developing and running workloads locally. It is an integrated environment that enables you to design, develop, deploy and manage on-premises, containerized cloud applications behind a firewall. It includes the container orchestrator Kubernetes, a private image repository, a management console and monitoring frameworks.
 
 ![alt text](images/architecture_pattern.png "Architecture")
 
