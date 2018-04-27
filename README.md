@@ -161,7 +161,11 @@ The objective is to discover the banking application located in the *banking-app
 2. Create a new repository and name it `icp-code-pattern-YOUR_USERNAME` (OR FORK THE REPO?!), this will be **YOUR_REPOSITORY_NAME**
 3.TODO
 
+---
 
+:thumbsup: Congratulations! Your banking application locally works ! Ready for IBM Cloud private ?
+
+---
 
 # Step 2 - Build and deploy a docker image to IBM Cloud private
 
