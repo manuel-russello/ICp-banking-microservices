@@ -25,18 +25,18 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 # Included components
 
-* [IBM LinuxOne](https://www.ibm.com/it-infrastructure/linuxone)
 * [IBM Cloud private](https://www.ibm.com/cloud/private)
-* [IBM Z Mainframe](https://www.ibm.com/it-infrastructure/z)
+* [IBM API Connect](http://www-03.ibm.com/software/products/en/api-connect)
 * [IBM z/OS Connect Enterprise Edition](https://www.ibm.com/us-en/marketplace/connect-enterprise-edition)
 * [IBM CICS Tansaction Server](https://www.ibm.com/us-en/marketplace/cics-transaction-server#product-header-top)
 * [IBM Db2](https://www.ibm.com/analytics/db2/zos)
 
 # Featured technologies
 
-* [microservice](https://www.ibm.com/cloud/garage/architectures/microservices/)
+* [Docker](https://www.docker.com/)
+* [Microservice](https://www.ibm.com/cloud/garage/architectures/microservices/)
 * [IBM LinuxOne](https://www.ibm.com/it-infrastructure/linuxone)
-* [IBM Cloud private](https://www.ibm.com/cloud/private)
+* [IBM Z Mainframe](https://www.ibm.com/it-infrastructure/z)
 
 # Steps
 
@@ -68,9 +68,58 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ---
 
-# Step 1 - Discover and locally run a banking application
+# Step 1 - Discover and locally run the banking application
+
 ## Part 1 - Discover the banking application
+
+
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
+
+1.	Sign up for an [IBM ID] if you don't have one already.
+
+2.	Go to the [API Developer Portal].
+
+3. Create an account if you have not done that already.
+	![alt text](images/createAccount.png "Create Account")
+   * Click **Create an Account**.
+   * Provide all required information. Be sure to use your IBM ID (email address) for this account.
+   * Click **Submit**.
+
+  
+   An account activation email will be sent to your registered IBM ID email. Click on the link in this email to activate your account.
+
+4. Login to your account.
+
+5. Create a new application.
+	![alt text](images/createApplication.png "Create Application")
+	* Click **Apps** from the menu.
+	* Click **Create new App**.
+	* Fill in all required fields.
+	* Click **Submit**.
+	
+	Make a note of the *client ID* and *client Secret*. You will need them to access the API later.
+	![alt text](images/keyApplication.png "API Keys")
+
+
+6.	Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
+	![alt text](images/bankingProduct.png "Choose the default plan")
+	* Click **API Products** from the top menu.
+	* Click **Banking Product** in the list.
+
+7. 	Subscribe to the Banking API.
+	![alt text](images/APISubscription.png "Subscribe")
+	* Click **Subscribe** to the Default Plan.
+	
+	![alt text](images/APISubscription2.png "Banking Product")
+	* Select the App that you have just created before.
+	* Click **Subscribe**.
+
+---
+
+:thumbsup: Congratulations! You have successfully discovered the banking API.
+
+---
+
 ## Part 3 - Run the banking application with NodeJS
 
 2. Clone your GitHub repository:
@@ -201,3 +250,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 #Troubleshooting
 #Privacy Notice
 #Links
+
+
+[IBM ID]: https://www.ibm.com/account/us-en/signup/register.html
+[API Developer Portal]: https://developer-contest-spbodieusibmcom-prod.developer.us.apiconnect.ibmcloud.com/
