@@ -128,8 +128,7 @@ The objective is to discover the banking application located in the *banking-app
 
 1. Install **Node.js**, **NPM**, and the **Git CLI**
 
-2. Make sure the app is working: (TO MOVE TO STEP 1?)
-    - Launch a terminal. Go to your repository root folder:
+2. Launch a terminal. Go to your repository root folder:
 
     `cd YOUR_REPOSITORY_NAME`
 
@@ -137,7 +136,7 @@ The objective is to discover the banking application located in the *banking-app
 
     `node banking-application/app.js`
 
-3. Launch a web brower and go to **localhost:3000**. The banking application appears.
+3. Launch a web browser and go to **localhost:3000**. The banking application appears.
     
 	![alt text](images/banking_app.png "Banking application")
 
