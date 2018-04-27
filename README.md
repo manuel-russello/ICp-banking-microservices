@@ -72,6 +72,9 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ## Part 1 - Discover the banking application
 
+1. Clone your GitHub repository:
+    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
@@ -113,18 +116,12 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 	![alt text](images/APISubscription2.png "Banking Product")
 	* Select the App that you have just created before.
 	* Click **Subscribe**.
-
----
-
-:thumbsup: Congratulations! You have successfully discovered the banking API.
-
----
+	
+8. Modify the */js/bankingAPI.js* in your banking application.
+	* Replace the client ID by your value from the IBM API developer portal.
+	* Replace the client Secret by your value from the IBM API developer portal.
 
 ## Part 3 - Run the banking application with NodeJS
-
-2. Clone your GitHub repository:
-    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
-
 
 1. Log in onto your development system, then install **Node.js**, **NPM**, and the **Git CLI**
 
