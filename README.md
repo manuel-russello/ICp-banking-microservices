@@ -74,15 +74,43 @@ The objective is to discover the banking application located in the *banking-app
 
 ## Part 1 - Discover the banking application
 
-1. Create a [Github account](https://github.com/)
+1. Create a [Github account](https://github.com/).
+
 	![alt text](images/github_signup.png "Sign up")
+	* Pick a username.
+	* Enter an email.
+	* Create a password.
+	* Click **Sign up for Github**.
 
-1. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+2. Fork the banking application from this Github repository to your own Github repository.
 
-2. Launch a terminal and clone this GitHub repository:
+	![alt text](images/fork.png "Fork the banking app")
+	* Click **Fork**.
+
+3. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) to manage your Github repository.
+	* Use **git clone** command to have have a local copy of source codes from a Github repository.
+	* Use **git pull** command to get fresh code from your Github repository.
+	* Use **git push** command to push new code to your Github repository.
+
+4. Launch a terminal and clone your GitHub repository to have a local copy of your banking application:
     `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+    
+	![alt text](images/clone.png "Clone the banking app")
+	* This source code can be imported into your favorite IDE.
 
-2. TODO
+5. Take a look of the *banking-application* folder:
+
+	![alt text](images/banking_app_structure.png "Banking application")
+	* *app.js*: the Node.js application (server code).
+	* *public/index.html*: the banking application (client code).
+	* *public/css*: the banking application stylesheet.
+	* *public/js*: Javascript libraries. *bankingAPI.js* will be modifie later to connect the banking application to a real corebanking system trough API calls.
+	* *package.json*: the package dependency file
+	* *Dockerfile*: file to build the docker file. it will be used later.
+
+5. You are now able to manage your banking application source code:
+	* Use **git pull** command to get fresh code from your Github repository.
+	* Use **git push** command to push new code to your Github repository.
 
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
