@@ -98,9 +98,7 @@ The objective is to discover the banking application located in the *banking-app
     
 	![alt text](images/clone.png "Clone the banking app")
 	
-	* This source code can be imported into your favorite IDE.
-
-5. Take a look of the *banking-application* folder:
+5. Import the source code into your favorite IDE and take a look of the *banking-application* folder:
 
 	![alt text](images/banking_app_structure.png "Banking application")
 	* *app.js*: the Node.js application (server code).
