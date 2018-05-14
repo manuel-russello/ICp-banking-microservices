@@ -104,7 +104,7 @@ The objective is to discover the banking application located in the *banking-app
 	* *app.js*: the Node.js application (server code).
 	* *public/index.html*: the banking application (client code).
 	* *public/css*: the banking application stylesheet.
-	* *public/js*: Javascript libraries. *bankingAPI.js* will be modifie later to connect the banking application to a real corebanking system trough API calls.
+	* *public/js*: Javascript libraries. *bankingAPI.js* will be modified later to connect the banking application to a real corebanking system through API calls (part 2).
 	* *package.json*: the package dependency file
 	* *Dockerfile*: file to build the docker file. it will be used later.
 
