@@ -115,6 +115,7 @@ The objective is to discover the banking application located in the *banking-app
 2.	Go to the [API Developer Portal].
 
 3. Create an account if you have not done that already.
+
 	![alt text](images/createAccount.png "Create Account")
    * Click **Create an Account**.
    * Provide all required information. Be sure to use your IBM ID (email address) for this account.
@@ -204,15 +205,13 @@ The objective is to build a docker image from the banking application and then d
 
 ## Part 1 - Build the Docker image
 
-1. Push your code to your Git repository
-    - Commit your changes:
+1. Take a look in the *banking-application/Dockerfile*:
 
-    `git add .`
-    `git commit -m "my message"`
-    
-    - Push your changes:
-
-    `git push`
+	![alt text](images/dockerfile.png "Dockerfile")
+	* *FROM ibmcom/ibmnode*: target system
+	* *WORKDIR "/app"*: ...
+	* *COPY package.json /app/*: ...
+	* ...
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
 1. Connect to the ICP Worker Node
