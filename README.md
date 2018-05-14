@@ -88,14 +88,16 @@ The objective is to discover the banking application located in the *banking-app
 	* Click **Fork**.
 
 3. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) to manage your Github repository.
-	* Use **git clone** command to have have a local copy of source codes from a Github repository.
-	* Use **git pull** command to get fresh code from your Github repository.
-	* Use **git push** command to push new code to your Github repository.
+	* Use *git clone* command to have have a local copy of source codes from a Github repository.
+	* Use *git pull* command to get fresh code from your Github repository.
+	* Use *git push* command to push new code to your Github repository.
 
 4. Launch a terminal and clone your GitHub repository to have a local copy of your banking application:
-    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+
+   `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
     
 	![alt text](images/clone.png "Clone the banking app")
+	
 	* This source code can be imported into your favorite IDE.
 
 5. Take a look of the *banking-application* folder:
