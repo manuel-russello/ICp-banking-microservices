@@ -205,6 +205,8 @@ The objective is to build a docker image from the banking application and then d
 
 ## Part 1 - Build the Docker image
 
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
+
 1. Take a look in the *banking-application/Dockerfile*:
 
 	![alt text](images/dockerfile.png "Dockerfile")
