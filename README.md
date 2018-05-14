@@ -216,12 +216,12 @@ Docker can build images automatically by reading the instructions from a Dockerf
 	* ...
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
-1. Connect to the ICP Worker Node
 
-2. Clone your repository
-    - From the folder where you want your projet to be cloned:
-    
-    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+Jenkins is ... . Jenkiins is used to build automatically build a docker image from a Github repository
+
+1. Connect to the Jenkins http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec
+
+2. Screenshot with google chrome ..
 
 3. Build the docker image
     - Go inside the app folder:
