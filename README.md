@@ -108,11 +108,6 @@ The objective is to discover the banking application located in the *banking-app
 	* *package.json*: the package dependency file
 	* *Dockerfile*: file to build the docker file. it will be used later.
 
-5. You are now able to manage your banking application source code:
-	* Use **git pull** command to get fresh code from your Github repository.
-	* Use **git push** command to push new code to your Github repository.
-
-
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
 1.	Sign up for an [IBM ID] if you don't have one already.
