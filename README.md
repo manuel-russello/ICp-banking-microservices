@@ -183,13 +183,18 @@ The objective is to discover the banking application located in the *banking-app
 
 
 ## Part 4 - Push the banking application to your GitHub repository
-1. Connect to your GitHub account or create one, it's free! Your username will be **YOUR_USERNAME**
-2. Create a new repository and name it `icp-code-pattern-YOUR_USERNAME` (OR FORK THE REPO?!), this will be **YOUR_REPOSITORY_NAME**
-3.TODO
+
+1.	Commit the fresh code you modified to add changes to the local repository:
+
+   `git commit -m "Update of bankingAPI.js"`
+
+2.	Push the code you commited to transfer the last commit to your Github repository:
+
+   `git push"`
 
 ---
 
-:thumbsup: Congratulations! Your banking application locally works ! Ready for IBM Cloud private ?
+:thumbsup: Congratulations! Your banking application locally works and modifications have been pushed to your Github repository! Ready for IBM Cloud private ?
 
 ---
 
