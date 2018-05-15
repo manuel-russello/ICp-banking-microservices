@@ -158,8 +158,8 @@ The objective is to discover the banking application located in the *banking-app
 ## Part 3 - Run the banking application with Node.js
 
 1. Install components for your environment (Windows, Mac OS, Linux):
-	*	[Node.js](https://nodejs.org/en/) : Node.js is javascript server and will run the banking application. 
-	* 	[npm](https://www.npmjs.com/get-npm) : npm resolves Node.js package dependencies. According to your operating system, npm may be distributed with Node.js.
+	*	[Node.js](https://nodejs.org/en/): Node.js is javascript server and will run the banking application.
+	* 	[npm](https://www.npmjs.com/get-npm): npm resolves Node.js package dependencies. According to your operating system, npm may be distributed with Node.js.
 
 2. Launch a terminal. Go to your repository root folder:
 
