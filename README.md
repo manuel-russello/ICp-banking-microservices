@@ -17,7 +17,7 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 ![alt text](images/architecture_pattern.png "Architecture")
 
-1. The user deploys the application based microservice on the worker Node on Linux on Z using IBM Cloud Private.
+1. The user deploys the application based microservice on the Worker Node on Linux on Z using IBM Cloud Private.
 2. The user installs and runs an instance of his microservice from IBM Cloud Private. The application calls a banking API published in API Connect.
 3. API Connect calls the back-end Z Mainframe through a banking API published in z/OS Connect EE.
 4. z/OS Connect EE calls the Account Management System (AMS) running in CICS. A COBOL program processes the request and returns banking data. Finally, banking data are sent back to microservice application in the Worker Node on Linux on Z.
@@ -70,49 +70,49 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 
 # Step 1 - Discover and locally run the banking application
 
-The objective is to discover the banking application located in the *banking-application* folder. This application is a NodeJS application. It will be locally tested before packaging it into a Docker image for IBM Cloud private.
+The objective is to discover the banking application located in the *banking-application* folder. This application is a Node.js application. It will be locally tested before packaging it into a Docker image for IBM Cloud private.
 
 ## Part 1 - Discover the banking application
 
-1. Create a [Github account](https://github.com/).
+1. Create a [GitHub account](https://github.com/).
 
 	![alt text](images/github_signup.png "Sign up")
 	* Pick a username.
 	* Enter an email.
 	* Create a password.
-	* Click **Sign up for Github**.
+	* Click **Sign up for GitHub**.
 
-2. Fork the banking application from this Github repository to your own Github repository.
+2. Fork the banking application from this GitHub repository to your own GitHub repository.
 
 	![alt text](images/fork.png "Fork the banking app")
 	* Click **Fork**.
 
-3. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) to manage your Github repository.
-	* Use *git clone* command to have have a local copy of source codes from a Github repository.
-	* Use *git pull* command to get fresh code from your Github repository.
-	* Use *git push* command to push new code to your Github repository.
+3. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) to manage your GitHub repository.
+	* Use *git clone* command to create a local copy of the source code from a GitHub repository.
+	* Use *git pull* command to get fresh code from your GitHub repository.
+	* Use *git push* command to push new code to your GitHub repository.
 
-4. Launch a terminal and clone your GitHub repository to have a local copy of your banking application:
+4. Launch a terminal and clone your GitHub repository to create a local copy of your banking application:
 
    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
     
 	![alt text](images/clone.png "Clone the banking app")
 	
-5. Import the source code into your favorite IDE and take a look of the *banking-application* folder:
+5. Import the source code into your favorite IDE and take a look at the *banking-application* folder:
 
 	![alt text](images/banking_app_structure.png "Banking application")
 	* *app.js*: the Node.js application (server code).
 	* *public/index.html*: the banking application (client code).
 	* *public/css*: the banking application stylesheet.
 	* *public/js*: Javascript libraries. *bankingAPI.js* will be modified later to connect the banking application to a real corebanking system through API calls (part 2).
-	* *package.json*: the package dependency file
+	* *package.json*: the package dependency file.
 	* *Dockerfile*: file to build the docker file. it will be used later.
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
-1.	Sign up for an [IBM ID] if you don't have one already.
+1. Sign up for an [IBM ID] if you don't have one already.
 
-2.	Go to the [API Developer Portal].
+2. Go to the [API Developer Portal].
 
 3. Create an account if you have not done that already.
 
@@ -130,19 +130,19 @@ The objective is to discover the banking application located in the *banking-app
 	![alt text](images/createApplication.png "Create Application")
 	* Click **Apps** from the menu.
 	* Click **Create new App**.
-	* Fill in all required fields.
+	* Fill in all the required fields.
 	* Click **Submit**.
 	
 	Make a note of the *client ID* and *client Secret*. You will need them to access the API later.
 	![alt text](images/keyApplication.png "API Keys")
 
 
-6.	Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
+6. Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
 	![alt text](images/bankingProduct.png "Choose the default plan")
 	* Click **API Products** from the top menu.
 	* Click **Banking Product** in the list.
 
-7. 	Subscribe to the Banking API.
+7. Subscribe to the Banking API.
 	![alt text](images/APISubscription.png "Subscribe")
 	* Click **Subscribe** to the Default Plan.
 	
@@ -157,8 +157,8 @@ The objective is to discover the banking application located in the *banking-app
 
 ## Part 3 - Run the banking application with Node.js
 
-1. Install components for your environment (Windows, Mac OS, Linux):
-	*	[Node.js](https://nodejs.org/en/): Node.js is javascript server and will run the banking application.
+1. Install these required components for your environment (Windows, Mac OS, Linux):
+	*	[Node.js](https://nodejs.org/en/): Node.js is a javascript application server and will run the banking application.
 	* 	[npm](https://www.npmjs.com/get-npm): npm resolves Node.js package dependencies. According to your operating system, npm may be distributed with Node.js.
 
 2. Launch a terminal. Go to your repository root folder:
@@ -177,25 +177,25 @@ The objective is to discover the banking application located in the *banking-app
 
 	![alt text](images/banking_app_test.png "Banking application")
     * Select a customer ID.
-    * Please wait during the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
+    * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
     * The result is displayed in a JSON structure.
     
-4. The banking application locally works, stop the Node.js server with a **SIGINT (CTRL+C)** from the terminal.
+4. The banking application locally works. Stop the Node.js server with a **SIGINT (CTRL+C)** from the terminal.
 
 
 ## Part 4 - Push the banking application to your GitHub repository
 
-1.	Commit the fresh code you modified to add changes to the local repository:
+1. Commit the fresh code you modified to add changes to the local repository:
 
    `git commit -m "Update of bankingAPI.js"`
 
-2.	Push the code you commited to transfer the last commit to your Github repository:
+2. Push the code you commited to transfer the last commit to your GitHub repository:
 
    `git push"`
 
 ---
 
-:thumbsup: Congratulations! Your banking application locally works and modifications have been pushed to your Github repository! Ready for IBM Cloud private ?
+:thumbsup: Congratulations! Your banking application locally works and modifications have been pushed to your GitHub repository! Ready for IBM Cloud private?
 
 ---
 
@@ -205,7 +205,7 @@ The objective is to build a docker image from the banking application and then d
 
 ## Part 1 - Build the Docker image
 
-Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build, users can create an automated build that executes several command-line instructions, step by step.
 
 1. Take a look in the *banking-application/Dockerfile*:
 
@@ -217,7 +217,7 @@ Docker can build images automatically by reading the instructions from a Dockerf
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
 
-Jenkins is ... . Jenkiins is used to build automatically build a docker image from a Github repository
+Jenkins is ... . In this particular cocntext, Jenkins is used to automatically build a docker image from a GitHub repository
 
 1. Connect to the Jenkins http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec
 
@@ -232,7 +232,7 @@ Jenkins is ... . Jenkiins is used to build automatically build a docker image fr
     
     `docker build -t banking-application-YOUR_USERNAME:latest .`
 
-    This step will build a **Docker image** and host it on the Worker Node's image repository, according to the steps written in the **Dockerfile**.
+    This step will build a **Docker image** and host it on the Worker Node's image repository according to the steps written in the **Dockerfile**.
 
 
 # Step 3 - Build and deploy an Helm chart to the ICP catalog
