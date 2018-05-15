@@ -207,7 +207,7 @@ The objective is to build a docker image from the banking application and then d
 
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build, users can create an automated build that executes several command-line instructions, step by step.
 
-1. Take a look in the *banking-application/Dockerfile*:
+1. Take a look at the *banking-application/Dockerfile*:
 
 	![alt text](images/dockerfile.png "Dockerfile")
 	* *FROM ibmcom/ibmnode*: This command gathers, from IBM's public Docker repository, a Ubuntu Linux image containing all the basic components to run a Node.js application. It will be used as a basis for our usecase. 
@@ -217,31 +217,19 @@ Docker can build images automatically by reading the instructions from a Dockerf
 	* *COPY . /app*: This command copies everything left of the app into our working directory inside the docker image, i.e. our app's source code.
 	* *ENV NODE_ENV production* and *ENV PORT 3000*: These two commands set environment variables. The first one tells our Node.js instance that we run in production mode, and thus don't need development libraries. The other one sets the port 3000 as our main networking port.
 	* *EXPOSE 3000*: This command tells docker to map the image's port 3000 to the operating system's port 3000. It will gives us a network access to the docker image and thus the Node.js app.
-	* *CMD ["npm", "start"]*: This last command tells Docker what to do when we launch the image, in our case *npm start*, which will start the Node.js app.
+	* *CMD ["npm", "start"]*: This last command tells Docker what to do when we launch the image, in our case **npm start**, which will start the Node.js app.
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
 
-Jenkins is a automation server  . In this particular cocntext, Jenkins is used to automatically build a docker image from a GitHub repository
+Jenkins is a automation server often used to build applications. In this journey's particular context, Jenkins is used to automatically build a docker image from a GitHub repository and username. It will clone your GitHub repository, build the docker image according to its Dockerfile we just analyzed, and finally add it to the ICP Worker Node's own Docker image repository.
 
-1. Connect to the Jenkins http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec
+1. Connect to the [Jenkins UI](http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec)
 
 2. Screenshot with google chrome ..
 
-3. Build the docker image
-    - Go inside the app folder:
-    
-    `cd YOUR_REPOSITORY_NAME/banking-application`
-    
-    - Build the image:
-    
-    `docker build -t banking-application-YOUR_USERNAME:latest .`
+# Step 3 - Build and deploy an Helm chart to the ICp catalog
 
-    This step will build a **Docker image** and host it on the Worker Node's image repository according to the steps written in the **Dockerfile**.
-
-
-# Step 3 - Build and deploy an Helm chart to the ICP catalog
-
-The objective is to build ...
+The objective is to build a Helm Chart giving our IBM Cloud private a way to create an instance of the Node.js app using your own configuration.
 
 
 ## Part 1 - Create the Helm chart
@@ -254,9 +242,10 @@ The objective is to build ...
     `cd helm-chart-YOUR_USERNAME`
 
 ## Part 2 - Configure the Helm chart
-(Steps to create the files and configure the values)
 
-10. Validate the Helm chart:
+1. (Steps to create the files and configure the values)
+
+2. Validate the Helm chart:
     - Go to the parent folder:
     
     `cd ..`
@@ -264,28 +253,13 @@ The objective is to build ...
     - Analyse and validate the chart:
     `helm lint helm-chart-YOUR_USERNAME`
 
-## Part 3 - Package and deploy your Helm chart to ICP
-1. Package the Helm chart
+3. Package the Helm chart
     
     `helm package helm-chart-YOUR_USERNAME`
 
-2. Connect to ICP
-    - Execute this command:
-
-    `bx pr login -a https://MASTER_NODE_IP:PORT --skip-ssl-validation`
-    
-    - When prompted, type in these credentials:
-        - Username: `admin`
-        - Password: `admin`
-        - Select an account: `1`
- 
-3. Upload the package to ICP
-    `bx pr load-helm-chart --archive helm-chart-YOUR_USERNAME-0.1.0.tgz --clustername MASTER_NODE_IP`
-
 # Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
 
-The objective is to ...
-
+The objective is to 
 
 ## Part 1 - Discover your Helm chart from the calalog
 1. Connect to the ICP Web UI through your Web browser, on **ICP_MASTER_NODE:PORT**
@@ -298,7 +272,7 @@ The objective is to ...
 
 4. Right to the catalog search bar, click on **Filter** then on the **local-charts** checkbox
 
-5. Search for your chart named **helm-chart-YOUR_USERNAME** and click on its card
+5. Search for your the chart named **ICp-banking-microservices** and click on its card
 
 ## Part 2 - Configure and install your banking microservice
 
