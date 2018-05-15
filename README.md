@@ -298,6 +298,21 @@ The objective is to discover the IBM Cloud Private catalog in order to instantia
 
 2. Select **access http** under the **Expose details** panel and enjoy your new app!
 
+	![alt text](images/banking_app.png "Banking application")
+
+4. Test your application.
+
+	![alt text](images/banking_app_test.png "Banking application")
+    * Select a customer ID.
+    * Please wait during the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
+    * The result is displayed in a JSON structure.
+
+---
+
+:thumbsup: Congratulations! Your banking application has been instantiated from IBM Cloud Private as container. Your banking application succeeded to call banking APIs to call the Mainframe for banking business services.
+
+---
+
 #Troubleshooting
 #Privacy Notice
 #Links
