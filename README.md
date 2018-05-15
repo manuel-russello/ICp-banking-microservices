@@ -210,14 +210,18 @@ Docker can build images automatically by reading the instructions from a Dockerf
 1. Take a look in the *banking-application/Dockerfile*:
 
 	![alt text](images/dockerfile.png "Dockerfile")
-	* *FROM ibmcom/ibmnode*: target system
-	* *WORKDIR "/app"*: ...
-	* *COPY package.json /app/*: ...
-	* ...
+	* *FROM ibmcom/ibmnode*: This command gathers, from IBM's public Docker repository, a Ubuntu Linux image containing all the basic components to run a Node.js application. It will be used as a basis for our usecase. 
+	* *WORKDIR "/app"*: This command creates a directory inside our image, from which we will inject our specific files.
+	* *COPY package.json /app/*: This command copies our **package.json** file into the working directory inside our image. This file holds information about the app, most importantly the package dependencies it will need.
+	* *RUN cd /app; npm install; npm prune --production*: These commands first move our focus to the working directory, then download and install our app's required dependencies.
+	* *COPY . /app*: This command copies everything left of the app into our working directory inside the docker image, i.e. our app's source code.
+	* *ENV NODE_ENV production* and *ENV PORT 3000*: These two commands set environment variables. The first one tells our Node.js instance that we run in production mode, and thus don't need development libraries. The other one sets the port 3000 as our main networking port.
+	* *EXPOSE 3000*: This command tells docker to map the image's port 3000 to the operating system's port 3000. It will gives us a network access to the docker image and thus the Node.js app.
+	* *CMD ["npm", "start"]*: This last command tells Docker what to do when we launch the image, in our case *npm start*, which will start the Node.js app.
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
 
-Jenkins is ... . In this particular cocntext, Jenkins is used to automatically build a docker image from a GitHub repository
+Jenkins is a automation server  . In this particular cocntext, Jenkins is used to automatically build a docker image from a GitHub repository
 
 1. Connect to the Jenkins http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec
 
