@@ -313,9 +313,9 @@ The objective is to discover the IBM Cloud Private catalog in order to instantia
 
 ---
 
-#Troubleshooting
-#Privacy Notice
-#Links
+# Troubleshooting
+# Privacy Notice
+# Links
 
 
 [IBM ID]: https://www.ibm.com/account/us-en/signup/register.html
