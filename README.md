@@ -54,15 +54,9 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 - [Part 1 - Build the Docker image](#part-1---build-the-docker-image)
 - [Part 2 - Deploy the docker image to IBM Cloud private](#part-2---deploy-the-docker-image-to-ibm-cloud-private)
 
-### Step 3 - Build and deploy an Helm chart to the IBM Cloud private catalog
+### Step 3 - Instantiate the banking microservice from the IBM Cloud private catalog
 
-- [Part 1 - Create the Helm chart](#part-1---create-the-helm-chart)
-- [Part 2 - Configure the Helm chart](#part-2---configure-the-helm-chart)
-- [Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog](#part-3---package-and-deploy-your-helm-chart-to-the-ibm-cloud-private-catalog)
-
-### Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
-
-- [Part 1 - Discover your Helm chart from the calalog](#part-1---discover-your-helm-chart-from-the-calalog)
+- [Part 1 - Discover the Helm chart from the calalog](#part-1---discover-the-helm-chart-from-the-calalog)
 - [Part 2 - Configure and install your banking microservice](#part-2---configure-and-install-your-banking-microservice)
 - [Part 3 - Access your banking microservice](#part-3---access-your-banking-microservice)
 
@@ -254,60 +248,22 @@ Jenkins is an open source automation server. It helps to automate the non-human 
 
 ---
 
-# Step 3 - Build and deploy an Helm chart to the ICP catalog
+# Step 3 - Instantiate the banking microservice from the IBM Cloud private catalog
 
 The objective is to discover the IBM Cloud Private catalog in order to instantiate a container from your Docker image containing your banking application. In this way, you will be able to test your banking application from ICP.
 
+## Part 1 - Discover the Helm chart from the calalog
 
-## Part 1 - Create the Helm chart
-1. Go back to your development system
+1. Login to the [IBM Cloud Private catalog] () and fill credentials:
+	
+	![alt text](images/icp_login.png "ICP Login")
+    * Replace the username: `****`
+    * Replace the password: `****`
 
-2. Create your helm chart   
-    `helm create helm-chart-YOUR_USERNAME`
+3. Go to the catalog from the menu.
 
-3. Go to your chart folder
-    `cd helm-chart-YOUR_USERNAME`
-
-## Part 2 - Configure the Helm chart
-(Steps to create the files and configure the values)
-
-10. Validate the Helm chart:
-    - Go to the parent folder:
-    
-    `cd ..`
-
-    - Analyse and validate the chart:
-    `helm lint helm-chart-YOUR_USERNAME`
-
-## Part 3 - Package and deploy your Helm chart to ICP
-1. Package the Helm chart
-    
-    `helm package helm-chart-YOUR_USERNAME`
-
-2. Connect to ICP
-    - Execute this command:
-
-    `bx pr login -a https://MASTER_NODE_IP:PORT --skip-ssl-validation`
-    
-    - When prompted, type in these credentials:
-        - Username: `admin`
-        - Password: `admin`
-        - Select an account: `1`
- 
-3. Upload the package to ICP
-    `bx pr load-helm-chart --archive helm-chart-YOUR_USERNAME-0.1.0.tgz --clustername MASTER_NODE_IP`
-
-# Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
-
-The objective is to ...
-
-
-## Part 1 - Discover your Helm chart from the calalog
-1. Connect to the ICP Web UI through your Web browser, on **ICP_MASTER_NODE:PORT**
-
-2. When prompted, type in these credentials then :
-    - Username: `admin`
-    - Password: `admin`
+	![alt text](images/icp_select_catalog.png "ICP catalog")
+	* Click on **Helm Charts**.
 
 3. Click on the top-left *hamburger* icon, then select the **Catalog** option
 
