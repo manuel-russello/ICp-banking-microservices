@@ -219,20 +219,36 @@ Docker can build images automatically by reading the instructions from a Dockerf
 
 Jenkins is ... . Jenkiins is used to build automatically build a docker image from a Github repository
 
-1. Connect to the Jenkins http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec
 
-2. Screenshot with google chrome ..
+Jenkins is an open source automation server. It helps to automate the non-human part of the software development process, with continuous integration and facilitating technical aspects of continuous delivery. It supports version control tools, including Git, and can execute shell scripts. In this Code Pattern, Jenkins has been setup in the ICP worker node on Linux on Z. It is used to automatically build a docker image from a Github repository to comply with a DevOps approach. After the build process, Jenkins deploys the Docker image to Docker repository in the ICP worker node based on Linux on Z.
 
-3. Build the docker image
-    - Go inside the app folder:
-    
-    `cd YOUR_REPOSITORY_NAME/banking-application`
-    
-    - Build the image:
-    
-    `docker build -t banking-application-YOUR_USERNAME:latest .`
+1. Connect to [Jenkins](http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec).
 
-    This step will build a **Docker image** and host it on the Worker Node's image repository, according to the steps written in the **Dockerfile**.
+2. Select values before building the Docker image:
+
+	![alt text](images/jenkins_overview.png "Jenkins overview")
+	* Replace *GITHUB_USERNAME* by your own Github username.
+	* Replace *GITHUB_REPOSITORY_NAME* by your own Github repository name
+
+3. Click **Build**.
+	
+	![alt text](images/jenkins_build_inprogress.png "Jenkins build in progress")
+	* A new build has been submitted into Jenkins and is in progress.
+	
+	
+4. Wait for the successful completion of your build:
+
+	![alt text](images/jenkins_build_success.png "Jenkins build")
+	
+5. Select your build then click **Console Ouptut** and **View As plain text** to display the build output
+	
+	![alt text](images/jenkins_build_details.png "Jenkins details")
+
+6.  Read the build output to understand how the Jenkins build has been executed:
+	
+	* Step 1 : Jenkins pulled your source code from yout Github repository.
+	* Step 2 : Jenkins built the Docker image from the Docker file described before.
+	* Step 3 : The Docker build action automatically added it to the Docker image repository of the ICP worker node on Linux on Z. Your banking application is now ready to be instantiated from the ICP catalog.
 
 
 # Step 3 - Build and deploy an Helm chart to the ICP catalog
