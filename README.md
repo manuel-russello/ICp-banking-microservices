@@ -210,15 +210,12 @@ Docker can build images automatically by reading the instructions from a Dockerf
 1. Take a look in the *banking-application/Dockerfile*:
 
 	![alt text](images/dockerfile.png "Dockerfile")
-	* *FROM ibmcom/ibmnode*: target system
+	* *FROM ibmcom/ibmnode*: it targets the system
 	* *WORKDIR "/app"*: ...
 	* *COPY package.json /app/*: ...
 	* ...
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
-
-Jenkins is ... . Jenkiins is used to build automatically build a docker image from a Github repository
-
 
 Jenkins is an open source automation server. It helps to automate the non-human part of the software development process, with continuous integration and facilitating technical aspects of continuous delivery. It supports version control tools, including Git, and can execute shell scripts. In this Code Pattern, Jenkins has been setup in the ICP worker node on Linux on Z. It is used to automatically build a docker image from a Github repository to comply with a DevOps approach. After the build process, Jenkins deploys the Docker image to Docker repository in the ICP worker node based on Linux on Z.
 
