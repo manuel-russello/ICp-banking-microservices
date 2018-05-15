@@ -271,15 +271,27 @@ The objective is to discover the IBM Cloud Private catalog in order to instantia
 	* Click on **Filter**
 	* Check **local-charts** to display customized charts.
 
-5. Click on the Helm Chart called **Banking Application** to see the overview of the this banking service.
+5. Click on the Helm Chart called **Banking Application** to see the overview of the this banking microservice.
+
+	![alt text](images/icp_catalog_local.png "ICP catalog")
+
+	![alt text](images/icp_banking_detail.png.png "ICP catalog")
 
 ## Part 2 - Configure and install your banking microservice
 
-1. Configure your banking service to prepare your container.
+1. Select your banking microservice to prepare your container.
 
-2. Use `banking-application-YOUR_USERNAME` as your release name and select **default** as the target namespace
+	![alt text](images/icp_banking_detail.png.png "ICP catalog")
+	* Click **Configure**.
 
-3. Scroll down to the bottom and click the **Install** button. When the process is finished, click **View Helm Release**
+2. Configure the banking microservice to instantiate a container from your Docker image built in the previous step:
+
+	![alt text](images/icp_banking_configuration.png.png "Banking service configuration")
+	* Fill the release name with *banking-application-YOUR_USERNAME*.
+	* Set the default namespace to *default*.
+	* Fill Image repository to your Docker image called *banking-application-YOUR_USERNAME*.
+
+3. Click the **Install** button. When the process is finished, click **View Helm Release**
 
 ## Part 3 - Access your banking microservice
 1. Click on the only **deployment** available 
