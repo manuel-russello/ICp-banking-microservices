@@ -251,6 +251,7 @@ Jenkins is an open source automation server. It helps to automate the non-human 
 	* Step 3 : The Docker build action automatically added it to the Docker image repository of the ICP worker node on Linux on Z. Your banking application is now ready to be instantiated from the ICP catalog.
 
 
+
 # Step 3 - Build and deploy an Helm chart to the ICP catalog
 
 The objective is to build ...
