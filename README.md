@@ -256,7 +256,7 @@ Jenkins is an open source automation server. It helps to automate the non-human 
 
 # Step 3 - Build and deploy an Helm chart to the ICP catalog
 
-The objective is to build ...
+The objective is to discover the IBM Cloud Private catalog in order to instantiate a container from your Docker image containing your banking application. In this way, you will be able to test your banking application from ICP.
 
 
 ## Part 1 - Create the Helm chart
