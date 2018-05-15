@@ -263,13 +263,15 @@ The objective is to discover the IBM Cloud Private catalog in order to instantia
 3. Go to the catalog from the menu.
 
 	![alt text](images/icp_select_catalog.png "ICP catalog")
-	* Click on **Helm Charts**.
+	* Click on **Catalog** then **Helm Charts**.
 
-3. Click on the top-left *hamburger* icon, then select the **Catalog** option
+4. Display customized Helm Charts, including a published helm chart for the banking application
 
-4. Right to the catalog search bar, click on **Filter** then on the **local-charts** checkbox
+	![alt text](images/icp_catalog.png "ICP catalog")
+	* Click on **Filter**
+	* Check **local-charts** to display customized charts.
 
-5. Search for your chart named **helm-chart-YOUR_USERNAME** and click on its card
+5. Click on the Helm Chart called **Banking Application** to see the overview of the this banking service.
 
 ## Part 2 - Configure and install your banking microservice
 
