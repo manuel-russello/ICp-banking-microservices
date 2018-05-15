@@ -275,14 +275,14 @@ The objective is to discover the IBM Cloud Private catalog in order to instantia
 
 ## Part 2 - Configure and install your banking microservice
 
-1. Bottom-right on your Helm chart page, click **configure**
+1. Configure your banking service to prepare your container.
 
-2. When prompted, use `banking-application-YOUR_USERNAME` as your release name and select **default** as the target namespace
+2. Use `banking-application-YOUR_USERNAME` as your release name and select **default** as the target namespace
 
 3. Scroll down to the bottom and click the **Install** button. When the process is finished, click **View Helm Release**
 
 ## Part 3 - Access your banking microservice
-1. Scroll down and click on the only **deployment** available 
+1. Click on the only **deployment** available 
 
 2. Select **access http** under the **Expose details** panel and enjoy your new app!
 
