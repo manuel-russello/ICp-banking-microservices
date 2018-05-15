@@ -74,13 +74,39 @@ The objective is to discover the banking application located in the *banking-app
 
 ## Part 1 - Discover the banking application
 
-1. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+1. Create a [Github account](https://github.com/).
 
-2. Launch a terminal and clone this GitHub repository:
-    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+	![alt text](images/github_signup.png "Sign up")
+	* Pick a username.
+	* Enter an email.
+	* Create a password.
+	* Click **Sign up for Github**.
 
-2. TODO
+2. Fork the banking application from this Github repository to your own Github repository.
 
+	![alt text](images/fork.png "Fork the banking app")
+	* Click **Fork**.
+
+3. Install the [Git command line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) to manage your Github repository.
+	* Use *git clone* command to have have a local copy of source codes from a Github repository.
+	* Use *git pull* command to get fresh code from your Github repository.
+	* Use *git push* command to push new code to your Github repository.
+
+4. Launch a terminal and clone your GitHub repository to have a local copy of your banking application:
+
+   `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+    
+	![alt text](images/clone.png "Clone the banking app")
+	
+5. Import the source code into your favorite IDE and take a look of the *banking-application* folder:
+
+	![alt text](images/banking_app_structure.png "Banking application")
+	* *app.js*: the Node.js application (server code).
+	* *public/index.html*: the banking application (client code).
+	* *public/css*: the banking application stylesheet.
+	* *public/js*: Javascript libraries. *bankingAPI.js* will be modified later to connect the banking application to a real corebanking system through API calls (part 2).
+	* *package.json*: the package dependency file
+	* *Dockerfile*: file to build the docker file. it will be used later.
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
@@ -89,6 +115,7 @@ The objective is to discover the banking application located in the *banking-app
 2.	Go to the [API Developer Portal].
 
 3. Create an account if you have not done that already.
+
 	![alt text](images/createAccount.png "Create Account")
    * Click **Create an Account**.
    * Provide all required information. Be sure to use your IBM ID (email address) for this account.
@@ -157,13 +184,18 @@ The objective is to discover the banking application located in the *banking-app
 
 
 ## Part 4 - Push the banking application to your GitHub repository
-1. Connect to your GitHub account or create one, it's free! Your username will be **YOUR_USERNAME**
-2. Create a new repository and name it `icp-code-pattern-YOUR_USERNAME` (OR FORK THE REPO?!), this will be **YOUR_REPOSITORY_NAME**
-3.TODO
+
+1.	Commit the fresh code you modified to add changes to the local repository:
+
+   `git commit -m "Update of bankingAPI.js"`
+
+2.	Push the code you commited to transfer the last commit to your Github repository:
+
+   `git push"`
 
 ---
 
-:thumbsup: Congratulations! Your banking application locally works ! Ready for IBM Cloud private ?
+:thumbsup: Congratulations! Your banking application locally works and modifications have been pushed to your Github repository! Ready for IBM Cloud private ?
 
 ---
 
@@ -173,23 +205,23 @@ The objective is to build a docker image from the banking application and then d
 
 ## Part 1 - Build the Docker image
 
-1. Push your code to your Git repository
-    - Commit your changes:
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
 
-    `git add .`
-    `git commit -m "my message"`
-    
-    - Push your changes:
+1. Take a look in the *banking-application/Dockerfile*:
 
-    `git push`
+	![alt text](images/dockerfile.png "Dockerfile")
+	* *FROM ibmcom/ibmnode*: target system
+	* *WORKDIR "/app"*: ...
+	* *COPY package.json /app/*: ...
+	* ...
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
-1. Connect to the ICP Worker Node
 
-2. Clone your repository
-    - From the folder where you want your projet to be cloned:
-    
-    `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME`
+Jenkins is ... . Jenkiins is used to build automatically build a docker image from a Github repository
+
+1. Connect to the Jenkins http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec
+
+2. Screenshot with google chrome ..
 
 3. Build the docker image
     - Go inside the app folder:
