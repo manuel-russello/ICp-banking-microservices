@@ -54,15 +54,9 @@ This journey accesses a fictitious retail banking system called MPLbank. MPLbank
 - [Part 1 - Build the Docker image](#part-1---build-the-docker-image)
 - [Part 2 - Deploy the docker image to IBM Cloud private](#part-2---deploy-the-docker-image-to-ibm-cloud-private)
 
-### Step 3 - Build and deploy an Helm chart to the IBM Cloud private catalog
+### Step 3 - Instantiate the banking microservice from the IBM Cloud private catalog
 
-- [Part 1 - Create the Helm chart](#part-1---create-the-helm-chart)
-- [Part 2 - Configure the Helm chart](#part-2---configure-the-helm-chart)
-- [Part 3 - Package and deploy your Helm chart to the IBM Cloud private catalog](#part-3---package-and-deploy-your-helm-chart-to-the-ibm-cloud-private-catalog)
-
-### Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
-
-- [Part 1 - Discover your Helm chart from the calalog](#part-1---discover-your-helm-chart-from-the-calalog)
+- [Part 1 - Discover the Helm chart from the calalog](#part-1---discover-the-helm-chart-from-the-calalog)
 - [Part 2 - Configure and install your banking microservice](#part-2---configure-and-install-your-banking-microservice)
 - [Part 3 - Access your banking microservice](#part-3---access-your-banking-microservice)
 
@@ -221,73 +215,106 @@ Docker can build images automatically by reading the instructions from a Dockerf
 
 ## Part 2 -  Deploy the docker image to IBM Cloud private
 
-Jenkins is a automation server often used to build applications. In this journey's particular context, Jenkins is used to automatically build a docker image from a GitHub repository and username. It will clone your GitHub repository, build the docker image according to its Dockerfile we just analyzed, and finally add it to the ICP Worker Node's own Docker image repository.
+Jenkins is an open source automation server. It helps automate the non-human part of the software development process with continuous integration, and facilitates technical aspects of continuous delivery. It supports version control tools, including Git, and can execute shell scripts. In this Code Pattern, Jenkins has been setup in the ICp Worker Node on Linux on Z. It is used to automatically build a docker image from a GitHub repository to comply with a DevOps approach. After the build process, Jenkins deploys the Docker image to the Docker repository of ICp Worker Node based on Linux on Z.
 
-1. Connect to the [Jenkins UI](http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec)
-![alt text](images/jenkins_build.png "Jenkins build UI")
+1. Connect to [Jenkins](http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec).
 
-# Step 3 - Build and deploy an Helm chart to the ICp catalog
+2. Select values before building the Docker image:
 
-The objective is to build a Helm Chart giving our IBM Cloud private a way to create an instance of the Node.js app using your own configuration.
+	![alt text](images/jenkins_overview.png "Jenkins overview")
+	* Replace *GITHUB_USERNAME* by your own GitHub username.
+	* Replace *GITHUB_REPOSITORY_NAME* by your own GitHub repository name
 
-## Part 1 - Create the Helm chart
-1. Go back to your development system. Get to 
+3. Click **Build**.
+	
+	![alt text](images/jenkins_build_inprogress.png "Jenkins build in progress")
+	* A new build has been submitted into Jenkins and is in progress.
 
-2. Create your helm chart   
-    `helm create helm-chart-YOUR_USERNAME`
+4. Wait for the successful completion of your build:
 
-3. Go to your chart folder
-    `cd helm-chart-YOUR_USERNAME`
+	![alt text](images/jenkins_build_success.png "Jenkins build")
 
-## Part 2 - Configure the Helm chart
+5. Select your build then click **Console Ouptut** and **View As plain text** to display the build output
+	
+	![alt text](images/jenkins_build_details.png "Jenkins details")
 
-1. (Steps to create the files and configure the values)
+6.  Read the build output to understand how the Jenkins build has been executed:
+	* Jenkins pulled your source code from yout GitHub repository.
+	* Jenkins built the Docker image from the Docker file described before.
+	* The Docker build action automatically added it to the Docker image repository of the ICp worker node on Linux on Z. Your banking application is now ready to be instantiated from the ICp catalog.
 
-2. Validate the Helm chart:
-    - Go to the parent folder:
-    
-    `cd ..`
+---
 
-    - Analyse and validate the chart:
-    `helm lint helm-chart-YOUR_USERNAME`
+:thumbsup: Congratulations! Your banking application has been packaged into a Docker image using a DevOps approach! Ready to use it from IBM Cloud private?
 
-3. Package the Helm chart
-    
-    `helm package helm-chart-YOUR_USERNAME`
+---
 
-# Step 4 - Instantiate the banking microservice from the IBM Cloud private catalog
+# Step 3 - Instantiate the banking microservice from the IBM Cloud private catalog
 
-The objective is to 
+The objective is to discover the IBM Cloud private catalog in order to instantiate a container from your Docker image containing your banking application. In this way, you will be able to test your banking application from ICp.
 
-## Part 1 - Discover your Helm chart from the calalog
-1. Connect to the ICP Web UI through your Web browser, on **ICP_MASTER_NODE:PORT**
+## Part 1 - Discover the Helm chart from the calalog
+1. Login to the [IBM Cloud private catalog] () and fill credentials:
+	
+	![alt text](images/icp_login.png "ICP Login")
+    * Replace the username: `****`
+    * Replace the password: `****`
 
-2. When prompted, type in these credentials then :
-    - Username: `admin`
-    - Password: `admin`
+3. Click the top-left icon then go to the catalog from the menu.
 
-3. Click on the top-left *hamburger* icon, then select the **Catalog** option
+	![alt text](images/icp_select_catalog.png "ICp catalog")
+	* Click on **Catalog** then **Helm Charts**.
 
-4. Right to the catalog search bar, click on **Filter** then on the **local-charts** checkbox
+4. Display customized Helm Charts, including a published helm chart for the banking application
 
-5. Search for your the chart named **ICp-banking-microservices** and click on its card
+	![alt text](images/icp_catalog.png "ICp catalog")
+	* Click on **Filter**
+	* Check **local-charts** to display customized charts.
+
+5. Click on the Helm Chart called **Banking Application** to see the overview of the this banking microservice.
+
+	![alt text](images/icp_catalog_local.png "ICp catalog")
+
+	![alt text](images/icp_banking_detail.png "ICp catalog")
 
 ## Part 2 - Configure and install your banking microservice
 
-1. Bottom-right on your Helm chart page, click **configure**
+1. Select your banking microservice to prepare your container.
 
-2. When prompted, use `banking-application-YOUR_USERNAME` as your release name and select **default** as the target namespace
+	![alt text](images/icp_banking_detail.png "ICp catalog")
+	* Click **Configure**.
 
-3. Scroll down to the bottom and click the **Install** button. When the process is finished, click **View Helm Release**
+2. Configure the banking microservice to instantiate a container from your Docker image built in the previous step:
+
+	![alt text](images/icp_banking_configuration.png "Banking service configuration")
+	* Fill the release name with *banking-application-YOUR_USERNAME*.
+	* Set the default namespace to *default*.
+	* Fill Image repository to your Docker image called *banking-application-YOUR_USERNAME*.
+
+3. Click the **Install** button. When the process is finished, click **View Helm Release**
 
 ## Part 3 - Access your banking microservice
-1. Scroll down and click on the only **deployment** available 
+1. Click on the only **deployment** available 
 
 2. Select **access http** under the **Expose details** panel and enjoy your new app!
 
-#Troubleshooting
-#Privacy Notice
-#Links
+	![alt text](images/banking_app.png "Banking application")
+
+4. Test your application:
+	![alt text](images/banking_app_test.png "Banking application")
+    * Select a customer ID.
+    * Please wait during the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
+    * The result is displayed in a JSON structure.
+
+---
+
+:thumbsup: Congratulations! Your banking application has been instantiated from IBM Cloud Private as container. Your banking application succeeded to call banking APIs to call the Mainframe for banking business services.
+
+---
+
+# Troubleshooting
+# Privacy Notice
+# Links
 
 
 [IBM ID]: https://www.ibm.com/account/us-en/signup/register.html
