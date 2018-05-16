@@ -224,16 +224,14 @@ Docker can build images automatically by reading the instructions from a Dockerf
 Jenkins is a automation server often used to build applications. In this journey's particular context, Jenkins is used to automatically build a docker image from a GitHub repository and username. It will clone your GitHub repository, build the docker image according to its Dockerfile we just analyzed, and finally add it to the ICP Worker Node's own Docker image repository.
 
 1. Connect to the [Jenkins UI](http://148.100.92.185:8080/job/docker-build-icp/build?delay=0sec)
-
-2. Screenshot with google chrome ..
+![alt text](images/jenkins_build.png "Jenkins build UI")
 
 # Step 3 - Build and deploy an Helm chart to the ICp catalog
 
 The objective is to build a Helm Chart giving our IBM Cloud private a way to create an instance of the Node.js app using your own configuration.
 
-
 ## Part 1 - Create the Helm chart
-1. Go back to your development system
+1. Go back to your development system. Get to 
 
 2. Create your helm chart   
     `helm create helm-chart-YOUR_USERNAME`
