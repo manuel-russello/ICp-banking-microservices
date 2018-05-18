@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "ICp-banking-microservices.fullname" . }}
+  labels:
+    app: {{ template "ICp-banking-microservices.name" . }}
+    chart: {{ template "ICp-banking-microservices.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "ICp-banking-microservices.name" . }}
+    release: {{ .Release.Name }}
