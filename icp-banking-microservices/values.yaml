@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: icp-banking-microservices
-  tag: stable
+  repository: GITHUB_USERNAME-GITHUB_REPOSITORY_NAME
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
